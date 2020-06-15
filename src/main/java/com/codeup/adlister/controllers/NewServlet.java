@@ -1,4 +1,4 @@
 package com.codeup.adlister.controllers;
 
-public NewServlet {
+public class NewServlet {
 }
