@@ -9,16 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
-@WebServlet(name = "ShowServlet", urlPatterns = "/show")
-public class ShowServlet extends HttpServlet {
+@WebServlet(name = "RandomAdServlet", urlPatterns = "/random_show")
+public class RandomAdServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        Long showAd = Long.parseLong(request.getParameter("id"));
-        Ad ad = DaoFactory.getAdsDao().oneAd(showAd);
+        List<Ad> ads = DaoFactory.getAdsDao().all();
+        int randomId = (int)(Math.random() * ads.size());
 
+        request.setAttribute("ad", ads.get(randomId));
 
-        request.setAttribute("ad", ad);
-        request.setAttribute("user", DaoFactory.getUsersDao().oneUser(ad.getUserId()));
+        request.setAttribute("user", DaoFactory.getUsersDao().oneUser(ads.get(randomId).getUserId()));
         request.getRequestDispatcher("/WEB-INF/ads/show.jsp").forward(request, response);
     }
 

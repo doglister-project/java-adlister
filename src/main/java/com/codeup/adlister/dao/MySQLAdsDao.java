@@ -58,7 +58,7 @@ public class MySQLAdsDao implements Ads {
     @Override
     public Ad oneAd(long id) {
         try {
-            String insertQuery = "select * from ads where id like ?";
+            String insertQuery = "select * from ads where id = ?";
             PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
             stmt.setLong(1, id);
             ResultSet rs = stmt.executeQuery();
