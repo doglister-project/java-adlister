@@ -12,21 +12,30 @@
 
 <div class="container">
     <%--    <c:if value="${ad}" --%>
-    <h1>Edit/Delete your Ad</h1>
+    <form method="POST" action="/edit">
+        <h1>Edit/Delete your Ad</h1>
+        <input type="hidden" name="ad_id" value="${ad.id}">
         <br>
-        <p>Current Title: </p><h2 class="text-danger">${ad.title}</h2>
+        <p>Current Title: </p>
+        <h2 class="text-danger">${ad.title}</h2>
         <label for="edit-title">Edit: Title</label>
         <input id="edit-title" name="edit-title" class="form-control text-danger" type="text">
         <br>
         <hr>
-    <p>Current Description: </p><p class="text-danger">${ad.description}</p>
+        <p>Current Description: </p>
+        <p class="text-danger">${ad.description}</p>
         <label for="edit-description">Edit: Description</label>
         <textarea id="edit-description" name="edit-description" class="form-control text-danger" type="text"></textarea>
         <br>
-            <button type="button" class="btn btn-primary">Edit</button>
+        <button type="submit" class="btn btn-primary">Edit</button>
 
-            <button type="button" class="btn btn-danger">Delete</button>
-
+    </form>
+    <form method="POST" action="/delete">
+        <input type="hidden" name="ad_id" value="${ad.id}">
+        <a href="/delete">
+            <button type="submit" class="btn btn-danger">Delete</button>
+        </a>
+    </form>
 
 
 </div>
