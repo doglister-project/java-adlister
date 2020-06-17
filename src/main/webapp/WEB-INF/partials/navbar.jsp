@@ -5,6 +5,9 @@
             <a class="navbar-brand" href="/ads">Adlister</a>
         </div>
         <ul class="nav navbar-nav navbar-right">
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/ads/create">Create A Dog Ad</a></li>
+            <li><a href="/search?search">Search For A Dog</a></li>
             <li><a href="/login">Login</a></li>
             <li><a href="/logout">Logout</a></li>
         </ul>
