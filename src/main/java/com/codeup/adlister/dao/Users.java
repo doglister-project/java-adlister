@@ -12,5 +12,9 @@ public interface Users {
 
 
 
+
     boolean validateUsername(String username);
+
+    User oneUser(long id);
+
 }

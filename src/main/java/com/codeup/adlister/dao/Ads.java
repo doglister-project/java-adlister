@@ -12,5 +12,10 @@ public interface Ads {
 
 
 
+
     List<Ad> search(String input);
+
+    Ad oneAd(long id);
+
+
 }
