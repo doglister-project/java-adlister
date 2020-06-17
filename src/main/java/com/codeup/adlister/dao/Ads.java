@@ -16,4 +16,5 @@ public interface Ads {
 
     Ad oneAd(long id);
 
+
 }

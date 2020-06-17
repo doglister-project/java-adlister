@@ -111,6 +111,8 @@ public class MySQLAdsDao implements Ads {
 
 
 
+
+
     @Override
     public List<Ad> search(String input) {
         PreparedStatement stmt = null;

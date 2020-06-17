@@ -11,7 +11,7 @@
 
 <div class="container">
     <h1>Here Are all the ads!</h1>
-    <a href="/random_show"><button>I'm Feeling Lucky!</button></a>
+    <a href="/random_show"><button class="btn btn-primary">I'm Feeling Lucky!</button></a>
 
 
     <c:forEach var="ad" items="${ads}">
