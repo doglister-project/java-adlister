@@ -75,4 +75,19 @@ public class MySQLUsersDao implements Users {
         );
     }
 
+
+    @Override
+    public boolean validateUsername(String username) {
+        String query = "SELECT * FROM users WHERE username = ? LIMIT 1";
+
+        try {
+            PreparedStatement stmt = connection.prepareStatement(query);
+            stmt.setString(1, username);
+            ResultSet rs = stmt.executeQuery();
+
+            return rs.first();
+        } catch (SQLException e) {
+            return false;
+        }
+    }
 }
