@@ -11,6 +11,7 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
+    <h1>Edit Profile</h1>
 
     <form method="post" action="update?user=${sessionScope.user.username}">
         <div class="form-group">
