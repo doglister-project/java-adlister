@@ -2,13 +2,13 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Edit Profile"/>
+        <jsp:param name="title" value="Edit Profile" />
     </jsp:include>
     <style>
     </style>
 </head>
 <body>
-<jsp:include page="/WEB-INF/partials/navbar.jsp"/>
+    <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
 

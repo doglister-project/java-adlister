@@ -28,6 +28,8 @@ public class UpdateUserProfileServlet extends HttpServlet {
                 req.getParameter("email"),
                 req.getParameter("password")
         );
+        updatedUser.setPassword(req.getParameter("password"));
+
         DaoFactory.getUsersDao().updateUser(updatedUser);
         user.setUsername(updatedUser.getUsername());
         resp.sendRedirect("profile");
