@@ -19,6 +19,7 @@ public class UpdateUserProfileServlet extends HttpServlet {
         req.getRequestDispatcher("/WEB-INF/editProfile.jsp").forward(req,resp);
     }
 
+    //updates user's username and email
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User user = (User) req.getSession().getAttribute("user");
         User updatedUser = new User(
