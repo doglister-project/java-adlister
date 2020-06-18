@@ -11,6 +11,10 @@
 
 <div class="container">
     <h1>Search: </h1>
+    <form>
+        <input id="search" type="search" name="search" placeholder="Doggy Search">
+        <button id="submit" type="submit">Submit</button>
+    </form>
 
     <c:forEach var="ad" items="${search}">
     <div class="col-md-6">

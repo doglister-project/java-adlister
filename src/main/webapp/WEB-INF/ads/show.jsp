@@ -17,6 +17,7 @@
     <h2>${user.username}</h2>
     <h2>${ad.title}</h2>
     <p>${ad.description}</p>
+    <a href="/ads"><button>Back To All Dog Ads!</button></a>
 
 </div>
 
