@@ -11,7 +11,9 @@
 
 <div class="container d-flex">
     <h1 class="text-justify">Welcome, ${sessionScope.user.username}!</h1>
+    <a href="/update?user"><button class="btn btn-primary">Update User Profile</button></a>
 </div>
+
 <div class="container">
     <c:forEach var="ad" items="${ads}">
         <div class="col-md-6 d-flex justify-content-between">
