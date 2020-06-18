@@ -3,21 +3,26 @@
 <html>
 <head>
     <jsp:include page="/WEB-INF/partials/head.jsp">
-        <jsp:param name="title" value="Viewing All The Ads" />
+        <jsp:param name="title" value="Doglister" />
     </jsp:include>
 </head>
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp" />
 
 <div class="container">
-    <h1>Here Are all the ads!</h1>
+    <h1>All loving dogs in need of a home!</h1>
 
     <form action="/ads" method="get">
         <label for="search"></label>
-        <input id="search" type="search" name="search" placeholder="Doggy Search">
-        <button id="submit" type="submit">Search</button>
+        <input id="search" type="search" name="search" placeholder="Search" class="form-control">
+        <br>
+        <button id="submit" type="submit" class="btn btn-primary">Search</button>
     </form>
-  <a href="/random_show"><button>Random Dog Ad!</button></a>
+
+    <p>Click here if you want to roll the dice and see what dog fate brings you!</p>
+    <a href="/random_show"><button class="btn btn-primary">Random Dog Generator!</button></a>
+    <br>
+    <hr>
 
 
     <c:forEach var="ad" items="${ads}">
