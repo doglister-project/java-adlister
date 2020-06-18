@@ -17,4 +17,7 @@ public interface Users {
 
     User oneUser(long id);
 
+
+    public void updateUser(User updatedUser);
+
 }
