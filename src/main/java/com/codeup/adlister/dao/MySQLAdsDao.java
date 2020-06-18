@@ -70,6 +70,36 @@ public class MySQLAdsDao implements Ads {
 
     }
 
+    @Override
+    public void deleteAd(long id) {
+        try {
+            String insertQuery = "DELETE FROM ads WHERE id = ?";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.setLong(1, id);
+            stmt.execute();
+            return;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error deleting ad.", e);
+        }
+
+    }
+
+    @Override
+    public void editAd(long id, String title, String description) {
+        try {
+            String insertQuery = "UPDATE ads SET title = ?, description = ? WHERE id = ?";
+            PreparedStatement stmt = connection.prepareStatement(insertQuery, Statement.RETURN_GENERATED_KEYS);
+            stmt.setString(1, title);
+            stmt.setString(2, description);
+            stmt.setLong(3, id);
+            stmt.executeUpdate();
+            return;
+        } catch (SQLException e) {
+            throw new RuntimeException("Error editing ad.", e);
+        }
+
+    }
+
     private Ad extractAd(ResultSet rs) throws SQLException {
         return new Ad(
             rs.getLong("id"),
@@ -108,6 +138,8 @@ public class MySQLAdsDao implements Ads {
         }
 
     }
+
+
 
 
 

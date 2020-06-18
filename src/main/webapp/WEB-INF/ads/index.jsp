@@ -11,12 +11,13 @@
 
 <div class="container">
     <h1>Here Are all the ads!</h1>
+
     <form action="/ads" method="get">
         <label for="search"></label>
         <input id="search" type="search" name="search" placeholder="Doggy Search">
         <button id="submit" type="submit">Search</button>
     </form>
-    <a href="/random_show"><button>Random Dog Ad!</button></a>
+  <a href="/random_show"><button>Random Dog Ad!</button></a>
 
 
     <c:forEach var="ad" items="${ads}">
