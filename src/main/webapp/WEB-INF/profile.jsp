@@ -9,14 +9,29 @@
 <body>
 <jsp:include page="/WEB-INF/partials/navbar.jsp"/>
 
-<div class="container d-flex">
+<div class="jumbotron d-none d-block">
     <h1 class="text-justify">Welcome, ${sessionScope.user.username}!</h1>
-    <a href="/update?user"><button class="btn btn-primary">Update User Profile</button></a>
+    <br>
+<%--    <a href="/update?user"><button class="btn btn-primary">Update User Profile</button></a>--%>
+    <a href="/update?user">
+        <button id="submit" type="submit" class="bone-btn profile">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+        <div class="c4"></div>
+        <div class="b1">
+            <div class="b2">
+                Update Profile
+            </div>
+        </div>
+    </button>
+    </a>
 </div>
 
 <div class="container">
+    <h3>Your Listings:</h3>
     <c:forEach var="ad" items="${ads}">
-        <div class="col-md-6 d-flex justify-content-between">
+        <div class=" over col-md-6 d-flex justify-content-between">
             <h2>${ad.title}</h2>
             <p>${ad.description}</p>
             <a href="/edit?id=${ad.id}">

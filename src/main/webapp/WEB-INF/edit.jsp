@@ -32,7 +32,7 @@
     <form method="POST" action="/delete">
         <input type="hidden" name="ad_id" value="${ad.id}">
         <a href="/delete">
-            <button type="submit" class="btn btn-danger">Delete</button>
+            <button type="submit" id="delete" class="btn btn-danger">Delete</button>
         </a>
     </form>
 

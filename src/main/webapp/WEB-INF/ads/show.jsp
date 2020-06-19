@@ -11,14 +11,10 @@
 
 
 <div class="container">
-<%--    <c:if value="${ad}" --%>
-    <h1>Here Is An ad!</h1>
-    <h2>${ad.id}</h2>
-    <h2>${user.username}</h2>
     <h2>${ad.title}</h2>
+    <h2>Posted by: ${user.username}</h2>
     <p>${ad.description}</p>
-    <a href="/ads"><button class="btn btn-primary">Back To All Dog Ads!</button></a>
-
+    <a href="/ads"><button class="btn">Back To All Dog Ads!</button></a>
 </div>
 
 </body>
