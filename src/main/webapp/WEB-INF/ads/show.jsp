@@ -11,6 +11,7 @@
 
 
 <div class="container">
+    <br><br>
     <h2>${ad.title}</h2>
     <h2>Posted by: ${user.username}</h2>
     <p>${ad.description}</p>

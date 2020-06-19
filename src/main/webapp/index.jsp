@@ -7,9 +7,18 @@
     </jsp:include>
 </head>
 <body>
+<div class="jumbotron jumbo-landing d-none d-block">
+    <h1>All loving dogs in need of a home!</h1>
+    <br><br>
+    <p>“Dogs are not our whole life, but they make our lives whole.” – Roger Caras</p>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+        <a href="/ads"><p>Click here if you want visit our kennel! <i class="fas fa-paw"></i></p></a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
-        <h1>Welcome to the Adlister!</h1>
+        <br><br>
     </div>
 </body>
 </html>
